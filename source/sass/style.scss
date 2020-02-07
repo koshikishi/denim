@@ -1,0 +1,11 @@
+// Подключаем Normalize
+@import "normalize";
+
+// Подключаем переменные
+@import "misc/variables";
+
+// Подключаем шаблонные и вспомогательные классы
+@import "misc/extends", "blocks/visually-hidden";
+
+// Подключаем основные стили
+@import "misc/base";
