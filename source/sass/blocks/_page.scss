@@ -1,0 +1,12 @@
+.page {
+  min-width: 320px;
+  margin: 0;
+  font: #{$fontSizeTextSmall}/#{$lineHeightTextSmall} $fontFamilyText;
+  color: $colorPrimary;
+  background-color: $colorWhite;
+
+  @media (min-width: 1280px) {
+    font-size: $fontSizeText;
+    line-height: $lineHeightText;
+  }
+}
