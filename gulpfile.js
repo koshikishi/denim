@@ -78,8 +78,7 @@ exports.img = () => {
       imagemin.svgo()
     ]))
     .pipe(dest(`build/img`));
-}
-exports.img = img;
+};
 
 // Генерация файлов изображений в формате *.webp
 exports.webp = () => {
