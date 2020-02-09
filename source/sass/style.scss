@@ -11,7 +11,10 @@
 @import "misc/animations";
 
 // Подключаем основные стили
-@import "misc/base", "blocks/page";
+@import "misc/base", "blocks/page", "blocks/button";
 
 // Подключаем стили шапки
 @import "blocks/header", "blocks/logo", "blocks/main-menu", "blocks/user-menu";
+
+// Подключаем стили hero-блока
+@import "blocks/hero";

@@ -25,6 +25,12 @@
   list-style: none;
 }
 
+%text-small {
+  font-weight: $fontWeightMedium;
+  font-size: $fontSizeTextSmall;
+  line-height: $lineHeightTextSmall;
+}
+
 %text-regular {
   font-weight: $fontWeightMedium;
   font-size: $fontSizeText;

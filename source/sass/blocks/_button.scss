@@ -1,0 +1,42 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 200px;
+  min-height: 64px;
+  padding: 22px 10px;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeText;
+  line-height: $lineHeightText;
+  vertical-align: middle;
+  text-align: center;
+  color: $colorWhite;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background-color: $colorPrimary;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: 2px 2px 2px $colorPrimary;
+    transform: translate(-2px, -2px);
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translate(0, 0);
+  }
+
+  &--medium {
+    min-width: 204px;
+  }
+
+  @media (min-width: 768px) {
+    &--medium {
+      min-width: 219px;
+    }
+  }
+}
