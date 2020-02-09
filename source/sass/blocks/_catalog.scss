@@ -89,12 +89,24 @@
 .catalog__item {
   margin-bottom: 27px;
 
+  .catalog--masonry & {
+    margin-bottom: 23px;
+  }
+
   @media (min-width: 768px) {
     margin-bottom: 46px;
+
+    .catalog--masonry & {
+      margin-bottom: 39px;
+    }
   }
 
   @supports (display: grid) {
     margin-bottom: 0;
+
+    .catalog--masonry & {
+      margin-bottom: 0;
+    }
   }
 }
 

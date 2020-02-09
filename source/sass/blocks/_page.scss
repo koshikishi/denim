@@ -44,3 +44,7 @@
     }
   }
 }
+
+.page__call-to-action {
+  @extend .page__hero;
+}
