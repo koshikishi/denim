@@ -25,6 +25,24 @@
   list-style: none;
 }
 
+%title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeTitleMobile;
+  line-height: $lineHeightTitleMobile;
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeTitleTablet;
+    line-height: $lineHeightTitleTablet;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: $fontSizeTitleDesktop;
+    line-height: $lineHeightTitleDesktop;
+  }
+}
+
 %text-small {
   font-weight: $fontWeightMedium;
   font-size: $fontSizeTextSmall;
@@ -35,4 +53,13 @@
   font-weight: $fontWeightMedium;
   font-size: $fontSizeText;
   line-height: $lineHeightText;
+}
+
+%text-regular-large {
+  @extend %text-regular;
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeTextLarge;
+    line-height: $lineHeightTextLarge;
+  }
 }

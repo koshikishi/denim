@@ -10,3 +10,15 @@
     line-height: $lineHeightText;
   }
 }
+
+.page__hero {
+  margin-bottom: 54px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 94px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 121px;
+  }
+}

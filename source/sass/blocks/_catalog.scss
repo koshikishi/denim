@@ -1,0 +1,135 @@
+.catalog__inner {
+  @extend %container;
+  display: flex;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+}
+
+.catalog__title {
+  @extend %title;
+  margin-bottom: 34px;
+
+  @media (min-width: 768px) {
+    width: 70%;
+    margin-bottom: 53px;
+    margin-left: 10px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 62px;
+  }
+}
+
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 290px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: 767px) {
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: 768px) {
+    order: 1;
+    width: 678px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 1170px;
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 130px);
+    gap: 27px 30px;
+    justify-content: center;
+    width: 100%;
+
+    @media (max-width: 767px) {
+      margin-bottom: 33px;
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(auto-fill, 206px);
+      row-gap: 46px;
+
+      .catalog--large & {
+        grid-template-columns: repeat(auto-fill, 324px);
+      }
+    }
+
+    @media (min-width: 1280px) {
+      grid-template-columns: repeat(4, 243px);
+
+      .catalog--large & {
+        grid-template-columns: repeat(4, 270px);
+      }
+    }
+  }
+}
+
+.catalog__item {
+  margin-bottom: 27px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 46px;
+  }
+
+  @supports (display: grid) {
+    margin-bottom: 0;
+  }
+}
+
+.catalog__view-all {
+  @extend %text-regular-large;
+  padding-right: 4px;
+  padding-bottom: 1px;
+  padding-left: 4px;
+  color: inherit;
+  border-bottom: 2px solid currentColor;
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 767px) {
+    align-self: center;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 2px;
+    margin-right: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 5px;
+    padding-bottom: 2px;
+  }
+}
