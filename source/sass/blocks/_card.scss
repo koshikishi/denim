@@ -63,21 +63,18 @@
 .card__title {
   @extend %text-regular-large;
   margin-top: 0;
-  margin-bottom: 3px;
+  margin-bottom: 0;
   transition: opacity 0.3s;
-
-  @media (min-width: 768px) {
-    margin-bottom: 7px;
-  }
 }
 
 .card__price {
-  margin-top: 0;
+  margin-top: 3px;
   margin-bottom: 0;
   font-weight: $fontWeightBold;
   transition: opacity 0.3s;
 
   @media (min-width: 768px) {
+    margin-top: 7px;
     font-size: $fontSizeText;
     line-height: $lineHeightText;
   }

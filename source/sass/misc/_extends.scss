@@ -63,3 +63,9 @@
     line-height: $lineHeightTextLarge;
   }
 }
+
+%text-large {
+  font-weight: $fontWeightMedium;
+  font-size: $fontSizeTextLarge;
+  line-height: $lineHeightTextLarge;
+}

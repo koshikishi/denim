@@ -65,6 +65,11 @@
 
     @media (max-width: 767px) {
       margin-bottom: 33px;
+
+      .catalog--masonry & {
+        row-gap: 26px;
+        margin-bottom: 32px;
+      }
     }
 
     @media (min-width: 768px) {
@@ -89,16 +94,14 @@
 .catalog__item {
   margin-bottom: 27px;
 
-  .catalog--masonry & {
-    margin-bottom: 23px;
+  @media (max-width: 767px) {
+    .catalog--masonry & {
+      margin-bottom: 26px;
+    }
   }
 
   @media (min-width: 768px) {
     margin-bottom: 46px;
-
-    .catalog--masonry & {
-      margin-bottom: 39px;
-    }
   }
 
   @supports (display: grid) {

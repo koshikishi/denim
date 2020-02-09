@@ -1,10 +1,13 @@
 .logo {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  width: 30%;
 
-  .page--index & {
-    width: 100%;
+  &--header {
+    width: 30%;
+
+    .page--index & {
+      width: 100%;
+    }
   }
 
   a {
@@ -25,5 +28,9 @@
 
   img {
     display: block;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
   }
 }
