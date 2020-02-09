@@ -22,3 +22,25 @@
     margin-bottom: 121px;
   }
 }
+
+.page__catalog {
+  margin-bottom: 60px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 80px;
+  }
+
+  @supports (display: grid) {
+    @media (min-width: 768px) {
+      margin-bottom: 96px;
+    }
+
+    @media (min-width: 1280px) {
+      margin-bottom: 126px;
+    }
+  }
+}
