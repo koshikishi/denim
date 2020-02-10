@@ -1,8 +1,8 @@
 // Подключаем Normalize
 @import "normalize";
 
-// Подключаем переменные
-@import "misc/variables";
+// Подключаем переменные и миксины
+@import "misc/variables", "misc/mixins";
 
 // Подключаем шаблонные и вспомогательные классы
 @import "misc/extends", "blocks/visually-hidden";
@@ -27,3 +27,6 @@
 
 // Подключаем стили подвала
 @import "blocks/footer";
+
+// Подключаем стили заглавного блока
+@import "blocks/heading", "blocks/breadcrumbs";
