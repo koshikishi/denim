@@ -69,3 +69,76 @@
   font-size: $fontSizeTextLarge;
   line-height: $lineHeightTextLarge;
 }
+
+%filter-color {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  background-color: currentColor;
+  border: 2px solid $colorWhite;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, opacity;
+
+  &[for="graycyan"] {
+    color: $colorFilterCyanGray;
+  }
+
+  &[for="darkblue"] {
+    color: $colorFilterBlueDark;
+  }
+
+  &[for="grayblue"] {
+    color: $colorFilterBlueGray;
+  }
+
+  &[for="darkcyan"] {
+    color: $colorFilterCyanDark;
+  }
+
+  &[for="lightgray"] {
+    color: $colorFilterGray;
+  }
+
+  &[for="blue"] {
+    color: $colorFilterBlue;
+  }
+
+  &:hover,
+  input:focus + & {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  input:checked + & {
+    box-shadow: 0 0 0 1px currentColor;
+  }
+}
+
+%filter-label {
+  @extend %text-small;
+  color: $colorSecondary;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-property: color, opacity;
+
+  &:hover,
+  input:focus + & {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  input:checked + & {
+    color: $colorPrimary;
+  }
+}

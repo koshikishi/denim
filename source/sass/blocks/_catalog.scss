@@ -35,6 +35,32 @@
   }
 }
 
+.catalog__filter {
+  margin-bottom: 40px;
+
+  @media (max-width: 767px) {
+    align-self: center;
+
+    @supports (display: grid) {
+      @media (min-width: 480px) {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    position: relative;
+    z-index: 1;
+    margin-right: 9px;
+    margin-bottom: 24px;
+    margin-left: auto;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 39px;
+  }
+}
+
 .catalog__list {
   display: flex;
   flex-wrap: wrap;
@@ -83,9 +109,11 @@
 
     @media (min-width: 1280px) {
       grid-template-columns: repeat(4, 243px);
+      gap: 62px 66px;
 
       .catalog--large & {
         grid-template-columns: repeat(4, 270px);
+        column-gap: 30px;
       }
     }
   }
@@ -102,6 +130,10 @@
 
   @media (min-width: 768px) {
     margin-bottom: 46px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 62px;
   }
 
   @supports (display: grid) {
@@ -148,3 +180,66 @@
     padding-bottom: 2px;
   }
 }
+
+.catalog__more {
+  order: 1;
+  margin-top: 13px;
+
+  @media (max-width: 767px) {
+    align-self: center;
+  }
+
+  @media (min-width: 768px) {
+    margin: 6px auto 4px;
+
+    @media (max-width: 1279px) {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+    }
+
+    @supports (display: grid) {
+      margin-top: 52px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 5px;
+
+    @supports (display: grid) {
+      margin-top: 67px;
+    }
+  }
+}
+
+.catalog__more-text {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-bottom: 11px;
+  font-size: $fontSizeText;
+  line-height: $lineHeightText;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-image: linear-gradient(90deg, $colorPrimary 20%, $colorLine 20%);
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+    padding-bottom: 6px;
+    font-size: $fontSizeTextLarge;
+    line-height: $lineHeightTextLarge;
+
+    @media (max-width: 1279px) {
+      padding-right: 4px;
+      padding-left: 4px;
+    }
+  }
+}
+

@@ -20,7 +20,7 @@
 @import "blocks/hero";
 
 // Подключаем стили блока каталога
-@import "blocks/catalog", "blocks/card";
+@import "blocks/catalog", "blocks/card", "blocks/filter";
 
 // Подключаем стили блока призыва к действию
 @import "blocks/call-to-action";

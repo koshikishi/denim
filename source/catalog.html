@@ -78,9 +78,9 @@
       <section class="catalog page__catalog">
         <div class="catalog__inner">
           <h2 class="visually-hidden">Denim Collection Fall 2019 Catalog</h2>
-          <div class="filter catalog__filter">
+          <div class="filter catalog__filter" id="filter">
             <a class="filter__select" href="#filter">Filter by</a>
-            <form class="filter__dropdown" id="filter" action="#">
+            <form class="filter__dropdown" action="#">
               <div class="filter__heading">
                 <button class="filter__clear" type="reset">Clear all</button>
                 <h3 class="filter__title">Filters</h3>
@@ -100,24 +100,28 @@
                         <div class="filter__origin">
                           <button class="filter__handle" type="button">
                             <div class="filter__touch-area"></div>
-                            <div class="filter__tooltip"></div>
+                            <div class="filter__tooltip">40</div>
                             <span class="visually-hidden">Min Price</span>
                           </button>
+                        </div>
+                        <div class="filter__origin">
                           <button class="filter__handle" type="button">
                             <div class="filter__touch-area"></div>
-                            <div class="filter__tooltip"></div>
+                            <div class="filter__tooltip">240</div>
                             <span class="visually-hidden">Max Price</span>
                           </button>
                         </div>
                       </div>
                     </div>
-                    <div class="filter__price-field">
-                      <label class="filter__price-label" for="minprice">$</label>
-                      <input class="filter__price-input" id="minprice" type="number" name="minprice" placeholder="0" min="0" max="300" aria-label="Min Price">
-                    </div>
-                    <div class="filter__price-field">
-                      <label class="filter__price-label" for="maxprice">$</label>
-                      <input class="filter__price-input" id="maxprice" type="number" name="maxprice" placeholder="300" min="0" max="300" aria-label="Max Price">
+                    <div class="filter__price-fields">
+                      <div class="filter__price-field">
+                        <label class="filter__price-label" for="minprice">$</label>
+                        <input class="filter__price-input" id="minprice" type="number" name="minprice" placeholder="0" min="0" max="300" aria-label="Min Price">
+                      </div>
+                      <div class="filter__price-field">
+                        <label class="filter__price-label" for="maxprice">$</label>
+                        <input class="filter__price-input" id="maxprice" type="number" name="maxprice" placeholder="300" min="0" max="300" aria-label="Max Price">
+                      </div>
                     </div>
                   </div>
                 </dd>
@@ -128,37 +132,37 @@
                   <div class="filter__colors">
                     <div class="filter__color">
                       <input class="visually-hidden" id="graycyan" type="checkbox" name="color" value="graycyan">
-                      <label class="filter__color-label filter__color-label--gray-cyan" for="graycyan">
+                      <label class="filter__color-label" for="graycyan">
                         <span class="visually-hidden">Grayish Cyan</span>
                       </label>
                     </div>
                     <div class="filter__color">
                       <input class="visually-hidden" id="darkblue" type="checkbox" name="color" value="darkblue">
-                      <label class="filter__color-label filter__color-label--dark-blue" for="darkblue">
+                      <label class="filter__color-label" for="darkblue">
                         <span class="visually-hidden">Dark Blue</span>
                       </label>
                     </div>
                     <div class="filter__color">
                       <input class="visually-hidden" id="grayblue" type="checkbox" name="color" value="grayblue">
-                      <label class="filter__color-label filter__color-label--gray-blue" for="grayblue">
+                      <label class="filter__color-label" for="grayblue">
                         <span class="visually-hidden">Grayish Blue</span>
                       </label>
                     </div>
                     <div class="filter__color">
                       <input class="visually-hidden" id="darkcyan" type="checkbox" name="color" value="darkcyan">
-                      <label class="filter__color-label filter__color-label--dark-cyan" for="darkcyan">
+                      <label class="filter__color-label" for="darkcyan">
                         <span class="visually-hidden">Dark Cyan</span>
                       </label>
                     </div>
                     <div class="filter__color">
                       <input class="visually-hidden" id="lightgray" type="checkbox" name="color" value="lightgray">
-                      <label class="filter__color-label filter__color-label--light-gray" for="lightgray">
+                      <label class="filter__color-label" for="lightgray">
                         <span class="visually-hidden">Light Gray</span>
                       </label>
                     </div>
                     <div class="filter__color">
                       <input class="visually-hidden" id="blue" type="checkbox" name="color" value="blue">
-                      <label class="filter__color-label filter__color-label--blue" for="blue">
+                      <label class="filter__color-label" for="blue">
                         <span class="visually-hidden">Blue</span>
                       </label>
                     </div>
@@ -189,9 +193,10 @@
                 </dd>
               </dl>
               <div class="filter__buttons">
-                <button class="button button--full filter__button" type="submit">Apply (9 products)</button>
+                <button class="button button--full" type="submit">Apply (9 products)</button>
               </div>
             </form>
+            <div class="filter__overlay"></div>
           </div>
           <div class="catalog__list">
             <div class="card catalog__item">
@@ -331,8 +336,10 @@
             </div>
           </div>
           <div class="catalog__more">
-            <p class="catalog__more-text">Showing 9 of 45 items</p>
-            <a class="button button--full catalog__more-button" href="#!">Load more</a>
+            <div class="catalog__more-inner">
+              <p class="catalog__more-text">Showing 9 of 45 items</p>
+              <a class="button button--full" href="#!">Load more</a>
+            </div>
           </div>
         </div>
       </section>

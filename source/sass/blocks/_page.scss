@@ -31,7 +31,7 @@
   }
 
   @media (min-width: 1280px) {
-    margin-bottom: 80px;
+    margin-bottom: 64px;
   }
 
   @supports (display: grid) {
@@ -47,4 +47,14 @@
 
 .page__call-to-action {
   @extend .page__hero;
+}
+
+.page__heading {
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 39px;
+  }
 }
