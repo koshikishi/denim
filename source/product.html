@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page">
-    <header class="header page__header">
+    <header class="header">
       <nav class="header__nav" id="menu">
         <div class="header__toggle">
           <a href="#menu">
@@ -51,146 +51,150 @@
       <section class="product page__product">
         <div class="product__inner">
           <div class="product__gallery">
-            <div class="product__gallery-list">
-              <picture class="product__gallery-image">
-                <source srcset="img/product_01-desktop.webp" media="(min-width: 1280px)" type="image/webp">
-                <source srcset="img/product_01-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                <source srcset="img/product_01-mobile.webp" type="image/webp">
-                <source srcset="img/product_01-desktop.jpg" media="(min-width: 1280px)">
-                <source srcset="img/product_01-tablet.jpg" media="(min-width: 768px)">
-                <source srcset="img/product_01-mobile.jpg">
-                <img src="img/product_01-desktop.jpg" alt="Overalls Photo" width="400" height="523">
-              </picture>
-              <picture class="product__gallery-image">
-                <source srcset="img/product_02-desktop.webp" media="(min-width: 1280px)" type="image/webp">
-                <source srcset="img/product_02-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                <source srcset="img/product_02-mobile.webp" type="image/webp">
-                <source srcset="img/product_02-desktop.jpg" media="(min-width: 1280px)">
-                <source srcset="img/product_02-tablet.jpg" media="(min-width: 768px)">
-                <source srcset="img/product_02-mobile.jpg">
-                <img src="img/product_02-desktop.jpg" alt="Overalls Photo" width="400" height="523">
-              </picture>
-              <picture class="product__gallery-image">
-                <source srcset="img/product_03-desktop.webp" media="(min-width: 1280px)" type="image/webp">
-                <source srcset="img/product_03-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                <source srcset="img/product_03-mobile.webp" type="image/webp">
-                <source srcset="img/product_03-desktop.jpg" media="(min-width: 1280px)">
-                <source srcset="img/product_03-tablet.jpg" media="(min-width: 768px)">
-                <source srcset="img/product_03-mobile.jpg">
-                <img src="img/product_03-desktop.jpg" alt="Overalls Photo" width="400" height="523">
-              </picture>
-              <picture class="product__gallery-image">
-                <source srcset="img/product_04-desktop.webp" media="(min-width: 1280px)" type="image/webp">
-                <source srcset="img/product_04-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                <source srcset="img/product_04-mobile.webp" type="image/webp">
-                <source srcset="img/product_04-desktop.jpg" media="(min-width: 1280px)">
-                <source srcset="img/product_04-tablet.jpg" media="(min-width: 768px)">
-                <source srcset="img/product_04-mobile.jpg">
-                <img src="img/product_04-desktop.jpg" alt="Overalls Photo" width="400" height="523">
-              </picture>
-            </div>
-            <div class="product__gallery-buttons">
-              <button class="product__gallery-button product__gallery-button--prev" type="button">
-                <span class="visually-hidden">Previous Image</span>
-              </button>
-              <button class="product__gallery-button product__gallery-button--next" type="button">
-                <span class="visually-hidden">Next Image</span>
-              </button>
-            </div>
-            <div class="product__gallery-previews">
-              <button class="product__gallery-preview product__gallery-preview--active" type="button">
-                <picture>
-                  <source srcset="img/product_01-preview-desktop.webp" media="(min-width: 1280px)" type="image/webp">
-                  <source srcset="img/product_01-preview-tablet.webp" type="image/webp">
-                  <source srcset="img/product_01-preview-desktop.jpg" media="(min-width: 1280px)">
-                  <source srcset="img/product_01-preview-tablet.jpg">
-                  <img src="img/product_01-preview-desktop.jpg" alt="Overalls Photo Preview" width="85" height="113">
+            <div class="product__gallery-inner">
+              <div class="product__gallery-list">
+                <picture class="product__gallery-image product__gallery-image--active">
+                  <source srcset="img/product_01-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                  <source srcset="img/product_01-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/product_01-mobile.webp" type="image/webp">
+                  <source srcset="img/product_01-desktop.jpg" media="(min-width: 1280px)">
+                  <source srcset="img/product_01-tablet.jpg" media="(min-width: 768px)">
+                  <source srcset="img/product_01-mobile.jpg">
+                  <img src="img/product_01-desktop.jpg" alt="Overalls Photo" width="400" height="523">
                 </picture>
-              </button>
-              <button class="product__gallery-preview" type="button">
-                <picture>
-                  <source srcset="img/product_02-preview-desktop.webp" media="(min-width: 1280px)" type="image/webp">
-                  <source srcset="img/product_02-preview-tablet.webp" type="image/webp">
-                  <source srcset="img/product_02-preview-desktop.jpg" media="(min-width: 1280px)">
-                  <source srcset="img/product_02-preview-tablet.jpg">
-                  <img src="img/product_02-preview-desktop.jpg" alt="Overalls Photo Preview" width="85" height="113">
+                <picture class="product__gallery-image">
+                  <source srcset="img/product_02-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                  <source srcset="img/product_02-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/product_02-mobile.webp" type="image/webp">
+                  <source srcset="img/product_02-desktop.jpg" media="(min-width: 1280px)">
+                  <source srcset="img/product_02-tablet.jpg" media="(min-width: 768px)">
+                  <source srcset="img/product_02-mobile.jpg">
+                  <img src="img/product_02-desktop.jpg" alt="Overalls Photo" width="400" height="523">
                 </picture>
-              </button>
-              <button class="product__gallery-preview" type="button">
-                <picture>
-                  <source srcset="img/product_03-preview-desktop.webp" media="(min-width: 1280px)" type="image/webp">
-                  <source srcset="img/product_03-preview-tablet.webp" type="image/webp">
-                  <source srcset="img/product_03-preview-desktop.jpg" media="(min-width: 1280px)">
-                  <source srcset="img/product_03-preview-tablet.jpg">
-                  <img src="img/product_03-preview-desktop.jpg" alt="Overalls Photo Preview" width="85" height="113">
+                <picture class="product__gallery-image">
+                  <source srcset="img/product_03-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                  <source srcset="img/product_03-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/product_03-mobile.webp" type="image/webp">
+                  <source srcset="img/product_03-desktop.jpg" media="(min-width: 1280px)">
+                  <source srcset="img/product_03-tablet.jpg" media="(min-width: 768px)">
+                  <source srcset="img/product_03-mobile.jpg">
+                  <img src="img/product_03-desktop.jpg" alt="Overalls Photo" width="400" height="523">
                 </picture>
-              </button>
-              <button class="product__gallery-preview" type="button">
-                <picture>
-                  <source srcset="img/product_04-preview-desktop.webp" media="(min-width: 1280px)" type="image/webp">
-                  <source srcset="img/product_04-preview-tablet.webp" type="image/webp">
-                  <source srcset="img/product_04-preview-desktop.jpg" media="(min-width: 1280px)">
-                  <source srcset="img/product_04-preview-tablet.jpg">
-                  <img src="img/product_04-preview-desktop.jpg" alt="Overalls Photo Preview" width="85" height="113">
+                <picture class="product__gallery-image">
+                  <source srcset="img/product_04-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                  <source srcset="img/product_04-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/product_04-mobile.webp" type="image/webp">
+                  <source srcset="img/product_04-desktop.jpg" media="(min-width: 1280px)">
+                  <source srcset="img/product_04-tablet.jpg" media="(min-width: 768px)">
+                  <source srcset="img/product_04-mobile.jpg">
+                  <img src="img/product_04-desktop.jpg" alt="Overalls Photo" width="400" height="523">
                 </picture>
-              </button>
+              </div>
+              <div class="product__gallery-buttons">
+                <button class="product__gallery-button product__gallery-button--prev" type="button">
+                  <span class="visually-hidden">Previous Image</span>
+                </button>
+                <button class="product__gallery-button product__gallery-button--next" type="button">
+                  <span class="visually-hidden">Next Image</span>
+                </button>
+              </div>
+              <div class="product__gallery-previews">
+                <button class="product__gallery-preview product__gallery-preview--active" type="button">
+                  <picture>
+                    <source srcset="img/product_01-preview-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <source srcset="img/product_01-preview-tablet.webp" type="image/webp">
+                    <source srcset="img/product_01-preview-desktop.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/product_01-preview-tablet.jpg">
+                    <img src="img/product_01-preview-desktop.jpg" alt="Overalls Photo Preview" width="85" height="113">
+                  </picture>
+                </button>
+                <button class="product__gallery-preview" type="button">
+                  <picture>
+                    <source srcset="img/product_02-preview-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <source srcset="img/product_02-preview-tablet.webp" type="image/webp">
+                    <source srcset="img/product_02-preview-desktop.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/product_02-preview-tablet.jpg">
+                    <img src="img/product_02-preview-desktop.jpg" alt="Overalls Photo Preview" width="85" height="113">
+                  </picture>
+                </button>
+                <button class="product__gallery-preview" type="button">
+                  <picture>
+                    <source srcset="img/product_03-preview-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <source srcset="img/product_03-preview-tablet.webp" type="image/webp">
+                    <source srcset="img/product_03-preview-desktop.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/product_03-preview-tablet.jpg">
+                    <img src="img/product_03-preview-desktop.jpg" alt="Overalls Photo Preview" width="85" height="113">
+                  </picture>
+                </button>
+                <button class="product__gallery-preview" type="button">
+                  <picture>
+                    <source srcset="img/product_04-preview-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <source srcset="img/product_04-preview-tablet.webp" type="image/webp">
+                    <source srcset="img/product_04-preview-desktop.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/product_04-preview-tablet.jpg">
+                    <img src="img/product_04-preview-desktop.jpg" alt="Overalls Photo Preview" width="85" height="113">
+                  </picture>
+                </button>
+              </div>
             </div>
           </div>
           <div class="product__info">
-            <h1 class="product__title">Overalls</h1>
-            <p class="product__description">Overalls in washed organic cotton denim. Collar, button fly, and adjustable belt at waist. Chest pockets with flap. Long, gently flared sleeves and straight legs with front and back pockets.</p>
-            <form class="product__form" action="#" method="post">
-              <fieldset class="product__form-fields">
-                <legend class="product__form-title">Color</legend>
-                <div class="product__form-colors">
-                  <div class="product__form-color">
-                    <input class="visually-hidden" id="graycyan" type="radio" name="color" value="graycyan">
-                    <label class="product__form-color-label product__form-color-label--gray-cyan" for="graycyan">
-                      <span class="visually-hidden">Grayish Cyan</span>
-                    </label>
+            <div class="product__info-inner">
+              <h1 class="product__title">Overalls</h1>
+              <p class="product__description">Overalls in washed organic cotton denim. Collar, button fly, and adjustable belt at waist. Chest pockets with flap. Long, gently flared sleeves and straight legs with front and back pockets.</p>
+              <form class="product__form" action="#" method="post">
+                <fieldset class="product__form-fields">
+                  <legend class="product__form-title">Color</legend>
+                  <div class="product__form-colors">
+                    <div class="product__form-color">
+                      <input class="visually-hidden" id="graycyan" type="radio" name="color" value="graycyan">
+                      <label class="product__form-color-label" for="graycyan">
+                        <span class="visually-hidden">Grayish Cyan</span>
+                      </label>
+                    </div>
+                    <div class="product__form-color">
+                      <input class="visually-hidden" id="darkblue" type="radio" name="color" value="darkblue">
+                      <label class="product__form-color-label" for="darkblue">
+                        <span class="visually-hidden">Dark Blue</span>
+                      </label>
+                    </div>
+                    <div class="product__form-color">
+                      <input class="visually-hidden" id="grayblue" type="radio" name="color" value="grayblue">
+                      <label class="product__form-color-label" for="grayblue">
+                        <span class="visually-hidden">Grayish Blue</span>
+                      </label>
+                    </div>
                   </div>
-                  <div class="product__form-color">
-                    <input class="visually-hidden" id="darkblue" type="radio" name="color" value="darkblue">
-                    <label class="product__form-color-label product__form-color-label--dark-blue" for="darkblue">
-                      <span class="visually-hidden">Dark Blue</span>
-                    </label>
+                </fieldset>
+                <fieldset class="product__form-fields">
+                  <legend class="product__form-title">Size</legend>
+                  <div class="product__form-sizes">
+                    <div class="product__form-size">
+                      <input class="visually-hidden" id="sizexs" type="radio" name="size" value="xs" aria-label="Extra Small">
+                      <label class="product__form-size-label" for="sizexs">XS</label>
+                    </div>
+                    <div class="product__form-size">
+                      <input class="visually-hidden" id="sizes" type="radio" name="size" value="s" aria-label="Small">
+                      <label class="product__form-size-label" for="sizes">S</label>
+                    </div>
+                    <div class="product__form-size">
+                      <input class="visually-hidden" id="sizem" type="radio" name="size" value="m" aria-label="Medium">
+                      <label class="product__form-size-label" for="sizem">M</label>
+                    </div>
+                    <div class="product__form-size">
+                      <input class="visually-hidden" id="sizel" type="radio" name="size" value="l" aria-label="Large">
+                      <label class="product__form-size-label" for="sizel">L</label>
+                    </div>
+                    <div class="product__form-size">
+                      <input class="visually-hidden" id="sizexl" type="radio" name="size" value="xl" aria-label="Extra Large">
+                      <label class="product__form-size-label" for="sizexl">XL</label>
+                    </div>
                   </div>
-                  <div class="product__form-color">
-                    <input class="visually-hidden" id="grayblue" type="radio" name="color" value="grayblue">
-                    <label class="product__form-color-label product__form-color-label--gray-blue" for="grayblue">
-                      <span class="visually-hidden">Grayish Blue</span>
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="product__form-fields">
-                <legend class="product__form-title">Size</legend>
-                <div class="product__form-sizes">
-                  <div class="product__form-size">
-                    <input class="visually-hidden" id="sizexs" type="radio" name="size" value="xs" aria-label="Extra Small">
-                    <label class="product__form-size-label" for="sizexs">XS</label>
-                  </div>
-                  <div class="product__form-size">
-                    <input class="visually-hidden" id="sizes" type="radio" name="size" value="s" aria-label="Small">
-                    <label class="product__form-size-label" for="sizes">S</label>
-                  </div>
-                  <div class="product__form-size">
-                    <input class="visually-hidden" id="sizem" type="radio" name="size" value="m" aria-label="Medium">
-                    <label class="product__form-size-label" for="sizem">M</label>
-                  </div>
-                  <div class="product__form-size">
-                    <input class="visually-hidden" id="sizel" type="radio" name="size" value="l" aria-label="Large">
-                    <label class="product__form-size-label" for="sizel">L</label>
-                  </div>
-                  <div class="product__form-size">
-                    <input class="visually-hidden" id="sizexl" type="radio" name="size" value="xl" aria-label="Extra Large">
-                    <label class="product__form-size-label" for="sizexl">XL</label>
-                  </div>
-                </div>
-              </fieldset>
-              <p class="product__price">$ 160</p>
-              <button class="button product__button" type="submit">Add to cart</button>
-            </form>
+                </fieldset>
+                <p class="product__price">$ 160</p>
+                <button class="button" type="submit">Add to cart</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
