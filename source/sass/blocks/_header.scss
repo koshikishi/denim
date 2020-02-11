@@ -113,6 +113,15 @@
     }
   }
 
+  &--closing {
+    a {
+      &::before,
+      &::after {
+        animation-direction: reverse;
+      }
+    }
+  }
+
   @media (min-width: 768px) {
     display: none;
   }
