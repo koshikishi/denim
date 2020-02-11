@@ -215,15 +215,19 @@
 
   @media (min-width: 768px) {
     margin-bottom: 22px;
-
-    @supports (display: grid) {
-      margin-bottom: 0;
-    }
   }
 
   @media (min-width: 1280px) {
+    margin-bottom: 20px;
+
     img {
       width: 85px;
+    }
+  }
+
+  @supports (display: grid) {
+    @media (min-width: 768px) {
+      margin-bottom: 0;
     }
   }
 }

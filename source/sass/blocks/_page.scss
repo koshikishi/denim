@@ -58,3 +58,25 @@
     margin-bottom: 39px;
   }
 }
+
+.page__product {
+  margin-bottom: 54px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 101px;
+  }
+
+  @supports (display: grid) {
+    @media (min-width: 768px) {
+      margin-bottom: 94px;
+    }
+
+    @media (min-width: 1280px) {
+      margin-bottom: 121px;
+    }
+  }
+}
