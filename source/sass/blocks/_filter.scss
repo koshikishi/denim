@@ -1,14 +1,6 @@
 .filter {
-  @media (max-width: 1279px) {
-    @media (min-width: 768px) {
-      min-width: 48%;
-    }
-
-    @supports (display: grid) {
-      @media (min-width: 640px) {
-        min-width: 48%;
-      }
-    }
+  @media (min-width: 768px) and (max-width: 1279px) {
+    min-width: 50%;
   }
 }
 
@@ -75,7 +67,7 @@
     }
 
     @media (max-width: 1279px) {
-      margin-left: 127px;
+      margin-left: 140px;
 
       @supports (display: grid) {
         margin-left: auto;
@@ -118,10 +110,16 @@
   @media (min-width: 768px) {
     position: absolute;
     top: 51px;
+    left: 140px;
     width: 208px;
     min-height: 309px;
     border: solid $colorPrimary;
     border-width: 0 2px 2px;
+
+    @supports (display: grid) {
+      right: 0;
+      left: auto;
+    }
   }
 
   @media (min-width: 1280px) {
