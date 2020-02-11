@@ -30,6 +30,10 @@
     "gulp-webp": "^4.0.1",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
+    "readable-stream": "^3.5.0",
     "scss-resets": "^0.5.2"
+  },
+  "dependencies": {
+    "masonry-layout": "^4.2.2"
   }
 }

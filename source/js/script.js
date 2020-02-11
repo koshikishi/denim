@@ -18,6 +18,18 @@ if (pageDownBtn) {
   });
 }
 
+// Создание сетки Masonry
+const catalogMasonry = document.querySelector(`.catalog--masonry .catalog__list`);
+
+if (catalogMasonry) {
+  const msnry = new Masonry(catalogMasonry, {
+    itemSelector: `.card`,
+    gutter: 30,
+    fitWidth: true,
+    transitionDuration: 0
+  });
+}
+
 // Появление и закрытие мобильного меню
 function menuToggle() {
   if (menuToggleBtn.classList.contains(`header__toggle--opened`)) {

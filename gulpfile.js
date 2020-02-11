@@ -8,6 +8,7 @@ const rename = require(`gulp-rename`);
 const htmlmin = require(`gulp-htmlmin`);
 const babel = require(`gulp-babel`);
 const uglify = require(`gulp-uglify`);
+const pipeline = require(`readable-stream`).pipeline;
 const modernizr = require(`gulp-modernizr`);
 const imagemin = require(`gulp-imagemin`);
 const imageminPngquant = require(`imagemin-pngquant`);
@@ -60,6 +61,19 @@ function js() {
     .pipe(dest(`build/js`));
 }
 exports.js = js;
+
+// Минификация файлов библиотек *.js
+function jslibs() {
+  return pipeline(
+    src(`node_modules/masonry-layout/dist/masonry.pkgd.js`),
+    uglify(),
+    rename({
+      suffix: `.min`
+    }),
+    dest(`build/js`)
+  );
+}
+exports.jslibs = jslibs;
 
 // Генерация файла библиотеки Modernizr
 function modzr() {
@@ -154,12 +168,12 @@ exports.refresh = refresh;
 // Создание сборки проекта
 exports.build = series(
   clean,
-  parallel(copy, css, js, modzr, html)
+  parallel(copy, css, js, jslibs, modzr, html)
 );
 
 // Создание сборки проекта и запуск сервера Browsersync
 exports.start = series(
   clean,
-  parallel(copy, css, js, modzr, html),
+  parallel(copy, css, js, jslibs, modzr, html),
   server
 );

@@ -37,10 +37,22 @@
   @supports (display: grid) {
     @media (min-width: 768px) {
       margin-bottom: 96px;
+
+      .js & {
+        &.catalog--masonry {
+          margin-bottom: 50px;
+        }
+      }
     }
 
     @media (min-width: 1280px) {
       margin-bottom: 126px;
+
+      .js & {
+        &.catalog--masonry {
+          margin-bottom: 64px;
+        }
+      }
     }
   }
 }

@@ -98,6 +98,10 @@
       .catalog--masonry & {
         row-gap: 26px;
         margin-bottom: 32px;
+
+        .js & {
+          margin-bottom: 6px;
+        }
       }
     }
 
@@ -144,6 +148,20 @@
 
     .catalog--masonry & {
       margin-bottom: 0;
+
+      .js & {
+        @media (max-width: 767px) {
+          margin-bottom: 26px;
+        }
+
+        @media (min-width: 768px) {
+          margin-bottom: 46px;
+        }
+
+        @media (min-width: 1280px) {
+          margin-bottom: 62px;
+        }
+      }
     }
   }
 }
