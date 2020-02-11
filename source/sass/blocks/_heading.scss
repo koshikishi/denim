@@ -73,7 +73,15 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("../img/image_bg-pattern.png");
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/image_bg-pattern.png");
+    }
+
+    .webp & {
+      background-image: url("../img/image_bg-pattern.webp");
+    }
   }
 
   &::before {

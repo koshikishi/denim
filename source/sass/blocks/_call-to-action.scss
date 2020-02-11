@@ -29,8 +29,17 @@
     left: 0;
     bottom: 0;
     z-index: -1;
-    background: url("../img/image_bg-pattern.png") 6px / 50px 45px;
+    background: 6px / 50px 45px;
     transform: scaleX(-1);
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/image_bg-pattern.png");
+    }
+
+    .webp & {
+      background-image: url("../img/image_bg-pattern.webp");
+    }
   }
 
   @media (max-width: 767px) {

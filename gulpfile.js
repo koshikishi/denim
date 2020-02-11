@@ -8,6 +8,7 @@ const rename = require(`gulp-rename`);
 const htmlmin = require(`gulp-htmlmin`);
 const babel = require(`gulp-babel`);
 const uglify = require(`gulp-uglify`);
+const modernizr = require(`gulp-modernizr`);
 const imagemin = require(`gulp-imagemin`);
 const imageminPngquant = require(`imagemin-pngquant`);
 const imageminMozjpeg = require(`imagemin-mozjpeg`);
@@ -59,6 +60,24 @@ function js() {
     .pipe(dest(`build/js`));
 }
 exports.js = js;
+
+// Генерация файла библиотеки Modernizr
+function modzr() {
+  return src(`fake`, {
+    allowEmpty: true
+  })
+    .pipe(modernizr({
+      options: [`setClasses`],
+      crawl: false,
+      tests: [`webp`]
+    }))
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: `.min`
+    }))
+    .pipe(dest(`build/js`));
+}
+exports.modzr = modzr;
 
 // Сжатие файлов изображений
 exports.img = () => {
@@ -135,12 +154,12 @@ exports.refresh = refresh;
 // Создание сборки проекта
 exports.build = series(
   clean,
-  parallel(copy, css, js, html)
+  parallel(copy, css, js, modzr, html)
 );
 
 // Создание сборки проекта и запуск сервера Browsersync
 exports.start = series(
   clean,
-  parallel(copy, css, js, html),
+  parallel(copy, css, js, modzr, html),
   server
 );

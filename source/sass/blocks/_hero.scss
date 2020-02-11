@@ -47,7 +47,16 @@
     position: absolute;
     width: 109px;
     height: 80px;
-    background: url("../img/image_bg-pattern.png") 4px / 16px;
+    background: 4px / 16px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/image_bg-pattern.png");
+    }
+
+    .webp & {
+      background-image: url("../img/image_bg-pattern.webp");
+    }
   }
 
   &::before {
