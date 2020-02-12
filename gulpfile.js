@@ -62,10 +62,32 @@ function js() {
 }
 exports.js = js;
 
+// Минификация файлов библиотек *.css
+function csslibs() {
+  return src(`node_modules/nouislider/distribute/nouislider.css`)
+    .pipe(sourcemaps.init())
+    .pipe(cleanCSS({
+      level: {
+        1: {
+          specialComments: false
+        }
+      }
+    }))
+    .pipe(rename({
+      suffix: `.min`
+    }))
+    .pipe(sourcemaps.write(`.`))
+    .pipe(dest(`build/css`))
+}
+exports.csslibs = csslibs;
+
 // Минификация файлов библиотек *.js
 function jslibs() {
   return pipeline(
-    src(`node_modules/masonry-layout/dist/masonry.pkgd.js`),
+    src([
+      `node_modules/masonry-layout/dist/masonry.pkgd.js`,
+      `node_modules/nouislider/distribute/nouislider.js`
+    ]),
     uglify(),
     rename({
       suffix: `.min`
@@ -168,12 +190,12 @@ exports.refresh = refresh;
 // Создание сборки проекта
 exports.build = series(
   clean,
-  parallel(copy, css, js, jslibs, modzr, html)
+  parallel(copy, css, js, csslibs, jslibs, modzr, html)
 );
 
 // Создание сборки проекта и запуск сервера Browsersync
 exports.start = series(
   clean,
-  parallel(copy, css, js, jslibs, modzr, html),
+  parallel(copy, css, js, csslibs, jslibs, modzr, html),
   server
 );

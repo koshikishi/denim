@@ -1,4 +1,4 @@
-@keyframes menu-toggle-top {
+@keyframes menu-toggle-line-top {
   0% {
     top: 4px;
     box-shadow: 0 5px currentColor;
@@ -16,7 +16,7 @@
   }
 }
 
-@keyframes menu-toggle-bottom {
+@keyframes menu-toggle-line-bottom {
   0% {
     bottom: 4px;
   }
@@ -28,5 +28,35 @@
   100% {
     bottom: 9px;
     transform: rotate(-45deg);
+  }
+}
+
+@keyframes filter-dropdown-mobile {
+  from {
+    transform: translate(50%, -100%);
+  }
+
+  to {
+    transform: translate(50%, 0);
+  }
+}
+
+@keyframes filter-dropdown-desktop {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes filter-field {
+  from {
+    max-height: 0;
+  }
+
+  to {
+    max-height: 100px;
   }
 }

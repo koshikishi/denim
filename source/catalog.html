@@ -7,6 +7,7 @@
     <script src="js/modernizr.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton%7cWork+Sans:400,500,700&display=swap">
+    <link rel="stylesheet" href="css/nouislider.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page">
@@ -92,35 +93,15 @@
                 </dt>
                 <dd class="filter__field">
                   <div class="filter__price">
-                    <div class="filter__target">
-                      <div class="filter__base">
-                        <div class="filter__connects">
-                          <div class="filter__connect"></div>
-                        </div>
-                        <div class="filter__origin">
-                          <button class="filter__handle" type="button">
-                            <div class="filter__touch-area"></div>
-                            <div class="filter__tooltip">40</div>
-                            <span class="visually-hidden">Min Price</span>
-                          </button>
-                        </div>
-                        <div class="filter__origin">
-                          <button class="filter__handle" type="button">
-                            <div class="filter__touch-area"></div>
-                            <div class="filter__tooltip">240</div>
-                            <span class="visually-hidden">Max Price</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
+                    <div class="filter__price-range"></div>
                     <div class="filter__price-fields">
                       <div class="filter__price-field">
                         <label class="filter__price-label" for="minprice">$</label>
-                        <input class="filter__price-input" id="minprice" type="number" name="minprice" placeholder="0" min="0" max="300" aria-label="Min Price">
+                        <input class="filter__price-input" id="minprice" type="number" name="minprice" value="0" placeholder="0" min="0" max="300" aria-label="Min Price">
                       </div>
                       <div class="filter__price-field">
                         <label class="filter__price-label" for="maxprice">$</label>
-                        <input class="filter__price-input" id="maxprice" type="number" name="maxprice" placeholder="300" min="0" max="300" aria-label="Max Price">
+                        <input class="filter__price-input" id="maxprice" type="number" name="maxprice" value="300" placeholder="300" min="0" max="300" aria-label="Max Price">
                       </div>
                     </div>
                   </div>
@@ -395,6 +376,7 @@
       </div>
     </footer>
     <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

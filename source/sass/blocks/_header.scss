@@ -104,11 +104,11 @@
       }
 
       &::before {
-        animation-name: menu-toggle-top;
+        animation-name: menu-toggle-line-top;
       }
 
       &::after {
-        animation-name: menu-toggle-bottom;
+        animation-name: menu-toggle-line-bottom;
       }
     }
   }
