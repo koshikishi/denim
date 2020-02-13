@@ -107,6 +107,16 @@ if (filter) {
   };
 }
 
+// Оживление галереи продукта
+if (document.querySelector(`.product__gallery-inner`)) {
+  const productGallery = new Glide(`.product__gallery-inner`, {
+    type: `carousel`,
+    classes: {
+      activeNav: `product__gallery-preview--active`
+    }
+  }).mount();
+}
+
 // Появление и закрытие элемента
 function elementToggle(elmnt, cls) {
   if (elmnt.classList.contains(`${cls}--opened`)) {

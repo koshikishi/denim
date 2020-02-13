@@ -7,6 +7,7 @@
     <script src="js/modernizr.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton%7cWork+Sans:400,500,700&display=swap">
+    <link rel="stylesheet" href="css/glide.core.min.css">
     <link rel="stylesheet" href="css/nouislider.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -52,55 +53,57 @@
       <section class="product page__product">
         <div class="product__inner">
           <div class="product__gallery">
-            <div class="product__gallery-inner">
-              <div class="product__gallery-list">
-                <picture class="product__gallery-image product__gallery-image--active">
-                  <source srcset="img/product_01-desktop.webp" media="(min-width: 1280px)" type="image/webp">
-                  <source srcset="img/product_01-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                  <source srcset="img/product_01-mobile.webp" type="image/webp">
-                  <source srcset="img/product_01-desktop.jpg" media="(min-width: 1280px)">
-                  <source srcset="img/product_01-tablet.jpg" media="(min-width: 768px)">
-                  <source srcset="img/product_01-mobile.jpg">
-                  <img src="img/product_01-desktop.jpg" alt="Overalls Photo" width="400" height="523">
-                </picture>
-                <picture class="product__gallery-image">
-                  <source srcset="img/product_02-desktop.webp" media="(min-width: 1280px)" type="image/webp">
-                  <source srcset="img/product_02-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                  <source srcset="img/product_02-mobile.webp" type="image/webp">
-                  <source srcset="img/product_02-desktop.jpg" media="(min-width: 1280px)">
-                  <source srcset="img/product_02-tablet.jpg" media="(min-width: 768px)">
-                  <source srcset="img/product_02-mobile.jpg">
-                  <img src="img/product_02-desktop.jpg" alt="Overalls Photo" width="400" height="523">
-                </picture>
-                <picture class="product__gallery-image">
-                  <source srcset="img/product_03-desktop.webp" media="(min-width: 1280px)" type="image/webp">
-                  <source srcset="img/product_03-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                  <source srcset="img/product_03-mobile.webp" type="image/webp">
-                  <source srcset="img/product_03-desktop.jpg" media="(min-width: 1280px)">
-                  <source srcset="img/product_03-tablet.jpg" media="(min-width: 768px)">
-                  <source srcset="img/product_03-mobile.jpg">
-                  <img src="img/product_03-desktop.jpg" alt="Overalls Photo" width="400" height="523">
-                </picture>
-                <picture class="product__gallery-image">
-                  <source srcset="img/product_04-desktop.webp" media="(min-width: 1280px)" type="image/webp">
-                  <source srcset="img/product_04-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                  <source srcset="img/product_04-mobile.webp" type="image/webp">
-                  <source srcset="img/product_04-desktop.jpg" media="(min-width: 1280px)">
-                  <source srcset="img/product_04-tablet.jpg" media="(min-width: 768px)">
-                  <source srcset="img/product_04-mobile.jpg">
-                  <img src="img/product_04-desktop.jpg" alt="Overalls Photo" width="400" height="523">
-                </picture>
+            <div class="product__gallery-inner glide">
+              <div class="product__gallery-track glide__track" data-glide-el="track">
+                <div class="product__gallery-list glide__slides">
+                  <picture class="product__gallery-image glide__slide">
+                    <source srcset="img/product_01-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <source srcset="img/product_01-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                    <source srcset="img/product_01-mobile.webp" type="image/webp">
+                    <source srcset="img/product_01-desktop.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/product_01-tablet.jpg" media="(min-width: 768px)">
+                    <source srcset="img/product_01-mobile.jpg">
+                    <img src="img/product_01-desktop.jpg" alt="Overalls Photo" width="400" height="523">
+                  </picture>
+                  <picture class="product__gallery-image glide__slide">
+                    <source srcset="img/product_02-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <source srcset="img/product_02-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                    <source srcset="img/product_02-mobile.webp" type="image/webp">
+                    <source srcset="img/product_02-desktop.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/product_02-tablet.jpg" media="(min-width: 768px)">
+                    <source srcset="img/product_02-mobile.jpg">
+                    <img src="img/product_02-desktop.jpg" alt="Overalls Photo" width="400" height="523">
+                  </picture>
+                  <picture class="product__gallery-image glide__slide">
+                    <source srcset="img/product_03-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <source srcset="img/product_03-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                    <source srcset="img/product_03-mobile.webp" type="image/webp">
+                    <source srcset="img/product_03-desktop.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/product_03-tablet.jpg" media="(min-width: 768px)">
+                    <source srcset="img/product_03-mobile.jpg">
+                    <img src="img/product_03-desktop.jpg" alt="Overalls Photo" width="400" height="523">
+                  </picture>
+                  <picture class="product__gallery-image glide__slide">
+                    <source srcset="img/product_04-desktop.webp" media="(min-width: 1280px)" type="image/webp">
+                    <source srcset="img/product_04-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                    <source srcset="img/product_04-mobile.webp" type="image/webp">
+                    <source srcset="img/product_04-desktop.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/product_04-tablet.jpg" media="(min-width: 768px)">
+                    <source srcset="img/product_04-mobile.jpg">
+                    <img src="img/product_04-desktop.jpg" alt="Overalls Photo" width="400" height="523">
+                  </picture>
+                </div>
               </div>
-              <div class="product__gallery-buttons">
-                <button class="product__gallery-button product__gallery-button--prev" type="button">
+              <div class="product__gallery-buttons glide__arrows" data-glide-el="controls">
+                <button class="product__gallery-button product__gallery-button--prev glide__arrow glide__arrow--left" type="button" data-glide-dir="<">
                   <span class="visually-hidden">Previous Image</span>
                 </button>
-                <button class="product__gallery-button product__gallery-button--next" type="button">
+                <button class="product__gallery-button product__gallery-button--next glide__arrow glide__arrow--right" type="button" data-glide-dir=">">
                   <span class="visually-hidden">Next Image</span>
                 </button>
               </div>
-              <div class="product__gallery-previews">
-                <button class="product__gallery-preview product__gallery-preview--active" type="button">
+              <div class="product__gallery-previews glide__bullets" data-glide-el="controls[nav]">
+                <button class="product__gallery-preview glide__bullet" type="button" data-glide-dir="=0">
                   <picture>
                     <source srcset="img/product_01-preview-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                     <source srcset="img/product_01-preview-tablet.webp" type="image/webp">
@@ -109,7 +112,7 @@
                     <img src="img/product_01-preview-desktop.jpg" alt="Overalls Photo Preview" width="85" height="113">
                   </picture>
                 </button>
-                <button class="product__gallery-preview" type="button">
+                <button class="product__gallery-preview glide__bullet" type="button" data-glide-dir="=1">
                   <picture>
                     <source srcset="img/product_02-preview-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                     <source srcset="img/product_02-preview-tablet.webp" type="image/webp">
@@ -118,7 +121,7 @@
                     <img src="img/product_02-preview-desktop.jpg" alt="Overalls Photo Preview" width="85" height="113">
                   </picture>
                 </button>
-                <button class="product__gallery-preview" type="button">
+                <button class="product__gallery-preview glide__bullet" type="button" data-glide-dir="=2">
                   <picture>
                     <source srcset="img/product_03-preview-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                     <source srcset="img/product_03-preview-tablet.webp" type="image/webp">
@@ -127,7 +130,7 @@
                     <img src="img/product_03-preview-desktop.jpg" alt="Overalls Photo Preview" width="85" height="113">
                   </picture>
                 </button>
-                <button class="product__gallery-preview" type="button">
+                <button class="product__gallery-preview glide__bullet" type="button" data-glide-dir="=3">
                   <picture>
                     <source srcset="img/product_04-preview-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                     <source srcset="img/product_04-preview-tablet.webp" type="image/webp">
@@ -318,6 +321,7 @@
         </ul>
       </div>
     </footer>
+    <script src="js/glide.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/script.min.js"></script>

@@ -64,7 +64,10 @@ exports.js = js;
 
 // Минификация файлов библиотек *.css
 function csslibs() {
-  return src(`node_modules/nouislider/distribute/nouislider.css`)
+  return src([
+    `node_modules/nouislider/distribute/nouislider.css`,
+    `node_modules/@glidejs/glide/dist/css/glide.core.css`
+  ])
     .pipe(sourcemaps.init())
     .pipe(cleanCSS({
       level: {
@@ -86,7 +89,8 @@ function jslibs() {
   return pipeline(
     src([
       `node_modules/masonry-layout/dist/masonry.pkgd.js`,
-      `node_modules/nouislider/distribute/nouislider.js`
+      `node_modules/nouislider/distribute/nouislider.js`,
+      `node_modules/@glidejs/glide/dist/glide.js`
     ]),
     uglify(),
     rename({
