@@ -52,8 +52,8 @@ if (filter) {
   };
 
   // Закрытие выпадающего списка
-  for (const elmnt of [filterClose, filterOverlay]) {
-    elmnt.onclick = (evt) => {
+  for (let i = 0; i < [filterClose, filterOverlay].length; i++) {
+    [filterClose, filterOverlay][i].onclick = (evt) => {
       evt.preventDefault();
       filterFieldsClose(filterFieldBtns, `filter__field-title`);
       elementClose(filter, `filter`);
@@ -61,10 +61,10 @@ if (filter) {
   }
 
   // Появление и закрытие полей формы выпадающего списка
-  for (const btn of filterFieldBtns) {
-    btn.onclick = (evt) => {
+  for (let i = 0; i < filterFieldBtns.length; i++) {
+    filterFieldBtns[i].onclick = (evt) => {
       evt.preventDefault();
-      elementToggle(btn.parentElement, `filter__field-title`);
+      elementToggle(filterFieldBtns[i].parentElement, `filter__field-title`);
     };
   }
 
@@ -96,11 +96,11 @@ if (filter) {
     filterRangeInputs[handle].value = Math.round(values[handle]);
   });
 
-  filterRangeInputs.forEach((input, handle) => {
-    input.onchange = function () {
-      filterRange.noUiSlider.setHandle(handle, this.value);
+  for (let i = 0; i < filterRangeInputs.length; i++) {
+    filterRangeInputs[i].onchange = function () {
+      filterRange.noUiSlider.setHandle(i, this.value);
     };
-  });
+  }
 
   filterDropdown.onreset = () => {
     filterRange.noUiSlider.reset();
@@ -134,7 +134,8 @@ function elementOpen(elmnt, cls) {
 // Закрытие элемента
 function elementClose(elmnt, cls) {
   cssAnimationReset(elmnt, `${cls}--opened`);
-  elmnt.classList.replace(`${cls}--opened`, `${cls}--closing`);
+  elmnt.classList.add(`${cls}--closing`);
+  elmnt.classList.remove(`${cls}--opened`);
 
   window.setTimeout(() => {
     elmnt.classList.remove(`${cls}--closing`);
@@ -143,9 +144,9 @@ function elementClose(elmnt, cls) {
 
 // Закрытие полей формы выпадающего списка
 function filterFieldsClose(list, cls) {
-  for (const elmnt of list) {
-    if (elmnt.parentElement.classList.contains(`${cls}--opened`)) {
-      elementClose(elmnt.parentElement, cls);
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].parentElement.classList.contains(`${cls}--opened`)) {
+      elementClose(list[i].parentElement, cls);
     }
   }
 }
