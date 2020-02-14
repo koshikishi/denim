@@ -53,15 +53,24 @@
       <section class="heading page__heading">
         <div class="heading__inner">
           <div class="heading__content">
-            <ol class="breadcrumbs heading__breadcrumbs">
-              <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="catalog.html">All categories</a>
+            <ol class="breadcrumbs heading__breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a class="breadcrumbs__link" href="catalog.html" itemprop="item">
+                  <span itemprop="name">All categories</span>
+                  <meta itemprop="position" content="1">
+                </a>
               </li>
-              <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="catalog.html">Woman</a>
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a class="breadcrumbs__link" href="catalog.html" itemprop="item">
+                  <span itemprop="name">Woman</span>
+                  <meta itemprop="position" content="2">
+                </a>
               </li>
-              <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link breadcrumbs__link--active">Jackets</a>
+              <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a class="breadcrumbs__link breadcrumbs__link--active" itemprop="item">
+                  <span itemprop="name">Jackets</span>
+                  <meta itemprop="position" content="3">
+                </a>
               </li>
             </ol>
             <h1 class="heading__title">Denim Collection Fall 2019</h1>
@@ -181,8 +190,8 @@
             <div class="filter__overlay"></div>
           </div>
           <div class="catalog__list">
-            <div class="card catalog__item">
-              <a href="product.html">
+            <div class="card catalog__item h-product hproduct" itemscope itemtype="http://schema.org/Product">
+              <a class="u-url url" href="product.html" itemprop="url">
                 <picture>
                   <source srcset="img/card_05-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                   <source srcset="img/card_05-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -190,14 +199,19 @@
                   <source srcset="img/card_05-desktop.jpg" media="(min-width: 1280px)">
                   <source srcset="img/card_05-tablet.jpg" media="(min-width: 768px)">
                   <source srcset="img/card_05-mobile.jpg">
-                  <img src="img/card_05-desktop.jpg" alt="Jacket Photo" width="243" height="270">
+                  <img class="u-photo photo" src="img/card_05-desktop.jpg" alt="Jacket Photo" width="243" height="270" itemprop="image">
                 </picture>
-                <h3 class="card__title">Jacket</h3>
-                <p class="card__price">$ 40</p>
+                <h3 class="card__title p-name fn" itemprop="name">Jacket</h3>
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <p class="card__price">
+                    $ <span class="p-price price" itemprop="price">40</span>
+                  </p>
+                  <meta itemprop="priceCurrency" content="USD">
+                </div>
               </a>
             </div>
-            <div class="card catalog__item">
-              <a href="product.html">
+            <div class="card catalog__item h-product hproduct" itemscope itemtype="http://schema.org/Product">
+              <a class="u-url url" href="product.html" itemprop="url">
                 <picture>
                   <source srcset="img/card_06-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                   <source srcset="img/card_06-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -205,14 +219,19 @@
                   <source srcset="img/card_06-desktop.jpg" media="(min-width: 1280px)">
                   <source srcset="img/card_06-tablet.jpg" media="(min-width: 768px)">
                   <source srcset="img/card_06-mobile.jpg">
-                  <img src="img/card_06-desktop.jpg" alt="Jacket Photo" width="243" height="270">
+                  <img class="u-photo photo" src="img/card_06-desktop.jpg" alt="Jacket Photo" width="243" height="270" itemprop="image">
                 </picture>
-                <h3 class="card__title">Jacket</h3>
-                <p class="card__price">$ 70</p>
+                <h3 class="card__title p-name fn" itemprop="name">Jacket</h3>
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <p class="card__price">
+                    $ <span class="p-price price" itemprop="price">70</span>
+                  </p>
+                  <meta itemprop="priceCurrency" content="USD">
+                </div>
               </a>
             </div>
-            <div class="card catalog__item">
-              <a href="product.html">
+            <div class="card catalog__item h-product hproduct" itemscope itemtype="http://schema.org/Product">
+              <a class="u-url url" href="product.html" itemprop="url">
                 <picture>
                   <source srcset="img/card_07-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                   <source srcset="img/card_07-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -220,14 +239,19 @@
                   <source srcset="img/card_07-desktop.jpg" media="(min-width: 1280px)">
                   <source srcset="img/card_07-tablet.jpg" media="(min-width: 768px)">
                   <source srcset="img/card_07-mobile.jpg">
-                  <img src="img/card_07-desktop.jpg" alt="Jacket Photo" width="243" height="270">
+                  <img class="u-photo photo" src="img/card_07-desktop.jpg" alt="Jacket Photo" width="243" height="270" itemprop="image">
                 </picture>
-                <h3 class="card__title">Jacket</h3>
-                <p class="card__price">$ 60</p>
+                <h3 class="card__title p-name fn" itemprop="name">Jacket</h3>
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <p class="card__price">
+                    $ <span class="p-price price" itemprop="price">60</span>
+                  </p>
+                  <meta itemprop="priceCurrency" content="USD">
+                </div>
               </a>
             </div>
-            <div class="card catalog__item">
-              <a href="product.html">
+            <div class="card catalog__item h-product hproduct" itemscope itemtype="http://schema.org/Product">
+              <a class="u-url url" href="product.html" itemprop="url">
                 <picture>
                   <source srcset="img/card_08-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                   <source srcset="img/card_08-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -235,14 +259,19 @@
                   <source srcset="img/card_08-desktop.jpg" media="(min-width: 1280px)">
                   <source srcset="img/card_08-tablet.jpg" media="(min-width: 768px)">
                   <source srcset="img/card_08-mobile.jpg">
-                  <img src="img/card_08-desktop.jpg" alt="Jacket Photo" width="243" height="270">
+                  <img class="u-photo photo" src="img/card_08-desktop.jpg" alt="Jacket Photo" width="243" height="270" itemprop="image">
                 </picture>
-                <h3 class="card__title">Jacket</h3>
-                <p class="card__price">$ 50</p>
+                <h3 class="card__title p-name fn" itemprop="name">Jacket</h3>
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <p class="card__price">
+                    $ <span class="p-price price" itemprop="price">50</span>
+                  </p>
+                  <meta itemprop="priceCurrency" content="USD">
+                </div>
               </a>
             </div>
-            <div class="card card--huge catalog__item">
-              <a href="product.html">
+            <div class="card card--huge catalog__item h-product hproduct" itemscope itemtype="http://schema.org/Product">
+              <a class="u-url url" href="product.html" itemprop="url">
                 <picture>
                   <source srcset="img/card_09-huge-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                   <source srcset="img/card_09-huge-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -250,14 +279,19 @@
                   <source srcset="img/card_09-huge-desktop.jpg" media="(min-width: 1280px)">
                   <source srcset="img/card_09-huge-tablet.jpg" media="(min-width: 768px)">
                   <source srcset="img/card_09-huge-mobile.jpg">
-                  <img src="img/card_09-huge-desktop.jpg" alt="Jacket Photo" width="552" height="670">
+                  <img class="u-photo photo" src="img/card_09-huge-desktop.jpg" alt="Jacket Photo" width="552" height="670" itemprop="image">
                 </picture>
-                <h3 class="card__title">Jacket</h3>
-                <p class="card__price">$ 160</p>
+                <h3 class="card__title p-name fn" itemprop="name">Jacket</h3>
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <p class="card__price">
+                    $ <span class="p-price price" itemprop="price">160</span>
+                  </p>
+                  <meta itemprop="priceCurrency" content="USD">
+                </div>
               </a>
             </div>
-            <div class="card catalog__item">
-              <a href="product.html">
+            <div class="card catalog__item h-product hproduct" itemscope itemtype="http://schema.org/Product">
+              <a class="u-url url" href="product.html" itemprop="url">
                 <picture>
                   <source srcset="img/card_10-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                   <source srcset="img/card_10-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -265,14 +299,19 @@
                   <source srcset="img/card_10-desktop.jpg" media="(min-width: 1280px)">
                   <source srcset="img/card_10-tablet.jpg" media="(min-width: 768px)">
                   <source srcset="img/card_10-mobile.jpg">
-                  <img src="img/card_10-desktop.jpg" alt="Jacket Photo" width="243" height="270">
+                  <img class="u-photo photo" src="img/card_10-desktop.jpg" alt="Jacket Photo" width="243" height="270" itemprop="image">
                 </picture>
-                <h3 class="card__title">Jacket</h3>
-                <p class="card__price">$ 40</p>
+                <h3 class="card__title p-name fn" itemprop="name">Jacket</h3>
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <p class="card__price">
+                    $ <span class="p-price price" itemprop="price">40</span>
+                  </p>
+                  <meta itemprop="priceCurrency" content="USD">
+                </div>
               </a>
             </div>
-            <div class="card catalog__item">
-              <a href="product.html">
+            <div class="card catalog__item h-product hproduct" itemscope itemtype="http://schema.org/Product">
+              <a class="u-url url" href="product.html" itemprop="url">
                 <picture>
                   <source srcset="img/card_11-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                   <source srcset="img/card_11-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -280,14 +319,19 @@
                   <source srcset="img/card_11-desktop.jpg" media="(min-width: 1280px)">
                   <source srcset="img/card_11-tablet.jpg" media="(min-width: 768px)">
                   <source srcset="img/card_11-mobile.jpg">
-                  <img src="img/card_11-desktop.jpg" alt="Jacket Photo" width="243" height="270">
+                  <img class="u-photo photo" src="img/card_11-desktop.jpg" alt="Jacket Photo" width="243" height="270" itemprop="image">
                 </picture>
-                <h3 class="card__title">Jacket</h3>
-                <p class="card__price">$ 110</p>
+                <h3 class="card__title p-name fn" itemprop="name">Jacket</h3>
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <p class="card__price">
+                    $ <span class="p-price price" itemprop="price">110</span>
+                  </p>
+                  <meta itemprop="priceCurrency" content="USD">
+                </div>
               </a>
             </div>
-            <div class="card catalog__item">
-              <a href="product.html">
+            <div class="card catalog__item h-product hproduct" itemscope itemtype="http://schema.org/Product">
+              <a class="u-url url" href="product.html" itemprop="url">
                 <picture>
                   <source srcset="img/card_12-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                   <source srcset="img/card_12-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -295,14 +339,19 @@
                   <source srcset="img/card_12-desktop.jpg" media="(min-width: 1280px)">
                   <source srcset="img/card_12-tablet.jpg" media="(min-width: 768px)">
                   <source srcset="img/card_12-mobile.jpg">
-                  <img src="img/card_12-desktop.jpg" alt="Jacket Photo" width="243" height="270">
+                  <img class="u-photo photo" src="img/card_12-desktop.jpg" alt="Jacket Photo" width="243" height="270" itemprop="image">
                 </picture>
-                <h3 class="card__title">Jacket</h3>
-                <p class="card__price">$ 35</p>
+                <h3 class="card__title p-name fn" itemprop="name">Jacket</h3>
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <p class="card__price">
+                    $ <span class="p-price price" itemprop="price">35</span>
+                  </p>
+                  <meta itemprop="priceCurrency" content="USD">
+                </div>
               </a>
             </div>
-            <div class="card catalog__item">
-              <a href="product.html">
+            <div class="card catalog__item h-product hproduct" itemscope itemtype="http://schema.org/Product">
+              <a class="u-url url" href="product.html" itemprop="url">
                 <picture>
                   <source srcset="img/card_13-desktop.webp" media="(min-width: 1280px)" type="image/webp">
                   <source srcset="img/card_13-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -310,10 +359,15 @@
                   <source srcset="img/card_13-desktop.jpg" media="(min-width: 1280px)">
                   <source srcset="img/card_13-tablet.jpg" media="(min-width: 768px)">
                   <source srcset="img/card_13-mobile.jpg">
-                  <img src="img/card_13-desktop.jpg" alt="Jacket Photo" width="243" height="270">
+                  <img class="u-photo photo" src="img/card_13-desktop.jpg" alt="Jacket Photo" width="243" height="270" itemprop="image">
                 </picture>
-                <h3 class="card__title">Jacket</h3>
-                <p class="card__price">$ 85</p>
+                <h3 class="card__title p-name fn" itemprop="name">Jacket</h3>
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <p class="card__price">
+                    $ <span class="p-price price" itemprop="price">85</span>
+                  </p>
+                  <meta itemprop="priceCurrency" content="USD">
+                </div>
               </a>
             </div>
           </div>
