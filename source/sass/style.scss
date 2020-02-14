@@ -1,11 +1,35 @@
 // Подключаем Normalize
 @import "normalize";
 
-// Подключаем переменные
-@import "misc/variables";
+// Подключаем переменные и миксины
+@import "misc/variables", "misc/mixins";
 
 // Подключаем шаблонные и вспомогательные классы
 @import "misc/extends", "blocks/visually-hidden";
 
+// Подключаем анимацию
+@import "misc/animations";
+
 // Подключаем основные стили
-@import "misc/base";
+@import "misc/base", "blocks/page", "blocks/button";
+
+// Подключаем стили шапки
+@import "blocks/header", "blocks/logo", "blocks/main-menu", "blocks/user-menu";
+
+// Подключаем стили hero-блока
+@import "blocks/hero";
+
+// Подключаем стили блока каталога
+@import "blocks/catalog", "blocks/card", "blocks/filter";
+
+// Подключаем стили блока призыва к действию
+@import "blocks/call-to-action";
+
+// Подключаем стили подвала
+@import "blocks/footer";
+
+// Подключаем стили заглавного блока
+@import "blocks/heading", "blocks/breadcrumbs";
+
+// Подключаем стили блока продукта
+@import "blocks/product";

@@ -1,0 +1,148 @@
+.call-to-action__inner {
+  @extend %container;
+  width: 320px;
+  padding-right: 0;
+  padding-left: 0;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 678px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 1170px;
+  }
+}
+
+.call-to-action__box {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-right: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background: 6px / 50px 45px;
+    transform: scaleX(-1);
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/image_bg-pattern.png");
+    }
+
+    .webp & {
+      background-image: url("../img/image_bg-pattern.webp");
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 15px;
+  }
+
+  @media (min-width: 768px) {
+    width: 324px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+    &::before {
+      background-position: 4px;
+      background-size: 51px 57px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    width: 470px;
+    padding-top: 31px;
+    padding-right: 70px;
+    padding-bottom: 31px;
+
+    &::before {
+      background-position: 6px;
+      background-size: 74px;
+    }
+  }
+}
+
+.call-to-action__content {
+  min-height: 139px;
+  padding: 36px 15px;
+  background-color: $colorBackground;
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    min-height: 155px;
+    padding: 46px 25px 46px 50px;
+  }
+
+  @media (min-width: 1280px) {
+    min-height: 176px;
+    padding: 66px 50px 66px 70px;
+  }
+}
+
+.call-to-action__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: $fontWeightNormal;
+  font-size: $fontSizeTextLarge;
+  line-height: $lineHeightTextLarge;
+  color: $colorSecondary;
+
+  span {
+    display: block;
+    margin-top: 2px;
+    font-weight: $fontWeightBold;
+    font-size: $fontSizeTitleMobile;
+    line-height: $lineHeightTitleMobile;
+    color: $colorPrimary;
+  }
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
+
+    span {
+      font-size: $fontSizeTitleDesktop;
+      line-height: $lineHeightTitleDesktop;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 42px;
+
+    span {
+      margin-top: 7px;
+    }
+  }
+}
+
+.call-to-action__image {
+  img {
+    display: block;
+    width: 320px;
+
+    @media (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media (min-width: 1280px) {
+      width: 700px;
+    }
+  }
+}

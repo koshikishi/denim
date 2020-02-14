@@ -1,0 +1,145 @@
+.footer {
+  background-color: $colorPrimary;
+}
+
+.footer__inner {
+  @extend %container;
+  padding-top: 49px;
+  padding-bottom: 30px;
+
+  @media (max-width: 767px) {
+    max-width: 638px;
+  }
+
+  @media (min-width: 768px) {
+    padding-bottom: 29px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-bottom: 28px;
+  }
+}
+
+.footer__nav {
+  margin-bottom: 16px;
+
+  @media (max-width: 767px) {
+    columns: 130px auto;
+    column-gap: 30px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 11px;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 25px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 30px;
+  }
+}
+
+.footer__menu {
+  @extend %list-reset;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.footer__menu-item {
+  margin-bottom: 22px;
+
+  @media (min-width: 768px) {
+    margin-right: 18px;
+    margin-left: 18px;
+  }
+}
+
+.footer__menu-link {
+  @extend %text-large;
+  color: $colorWhite;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.footer__social {
+  @extend %list-reset;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.footer__social-item {
+  margin-right: 35px;
+  margin-bottom: 22px;
+
+  @media (min-width: 768px) {
+    margin-right: 19px;
+    margin-left: 19px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-right: 14px;
+    margin-left: 14px;
+  }
+}
+
+.footer__social-link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: right / contain no-repeat;
+  transition: opacity 0.3s;
+
+  @each $social in fb, in, pin, tw {
+    &--#{$social} {
+      background-image: url("../img/footer_icon-#{$social}.svg");
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  @media (min-width: 768px) {
+    width: 17px;
+    background-position: center;
+
+    @media (max-width: 1279px) {
+      height: 17px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    width: 22px;
+  }
+}

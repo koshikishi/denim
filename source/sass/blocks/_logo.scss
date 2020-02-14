@@ -1,0 +1,36 @@
+.logo {
+  display: inline-flex;
+  justify-content: center;
+
+  &--header {
+    width: 30%;
+
+    .page--index & {
+      width: 100%;
+    }
+  }
+
+  a {
+    &[href] {
+      transition: opacity 0.3s;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  img {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}

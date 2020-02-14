@@ -1,6 +1,144 @@
+%container {
+  box-sizing: border-box;
+  min-width: 320px;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media (min-width: 768px) {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-right: 55px;
+    padding-left: 55px;
+  }
+}
+
 %list-reset {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+}
+
+%title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeTitleMobile;
+  line-height: $lineHeightTitleMobile;
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeTitleTablet;
+    line-height: $lineHeightTitleTablet;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: $fontSizeTitleDesktop;
+    line-height: $lineHeightTitleDesktop;
+  }
+}
+
+%text-small {
+  font-weight: $fontWeightMedium;
+  font-size: $fontSizeTextSmall;
+  line-height: $lineHeightTextSmall;
+}
+
+%text-regular {
+  font-weight: $fontWeightMedium;
+  font-size: $fontSizeText;
+  line-height: $lineHeightText;
+}
+
+%text-regular-large {
+  @extend %text-regular;
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeTextLarge;
+    line-height: $lineHeightTextLarge;
+  }
+}
+
+%text-large {
+  font-weight: $fontWeightMedium;
+  font-size: $fontSizeTextLarge;
+  line-height: $lineHeightTextLarge;
+}
+
+%filter-color {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  background-color: currentColor;
+  border: 2px solid $colorWhite;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, opacity;
+
+  &[for="graycyan"] {
+    color: $colorFilterCyanGray;
+  }
+
+  &[for="darkblue"] {
+    color: $colorFilterBlueDark;
+  }
+
+  &[for="grayblue"] {
+    color: $colorFilterBlueGray;
+  }
+
+  &[for="darkcyan"] {
+    color: $colorFilterCyanDark;
+  }
+
+  &[for="lightgray"] {
+    color: $colorFilterGray;
+  }
+
+  &[for="blue"] {
+    color: $colorFilterBlue;
+  }
+
+  &:hover,
+  input:focus + & {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  input:checked + & {
+    box-shadow: 0 0 0 1px currentColor;
+  }
+}
+
+%filter-label {
+  @extend %text-small;
+  color: $colorSecondary;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-property: color, opacity;
+
+  &:hover,
+  input:focus + & {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  input:checked + & {
+    color: $colorPrimary;
+  }
 }

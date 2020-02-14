@@ -1,0 +1,62 @@
+@keyframes menu-toggle-line-top {
+  0% {
+    top: 4px;
+    box-shadow: 0 5px currentColor;
+  }
+
+  50% {
+    top: 9px;
+    box-shadow: 0 0 currentColor;
+  }
+
+  100% {
+    top: 9px;
+    box-shadow: 0 0 currentColor;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes menu-toggle-line-bottom {
+  0% {
+    bottom: 4px;
+  }
+
+  50% {
+    bottom: 9px;
+  }
+
+  100% {
+    bottom: 9px;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes filter-dropdown-mobile {
+  from {
+    transform: translate(50%, -100%);
+  }
+
+  to {
+    transform: translate(50%, 0);
+  }
+}
+
+@keyframes filter-dropdown-desktop {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes filter-field {
+  from {
+    max-height: 0;
+  }
+
+  to {
+    max-height: 100px;
+  }
+}

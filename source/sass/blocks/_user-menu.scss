@@ -1,0 +1,81 @@
+.user-menu {
+  @extend %list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 35%;
+
+  .page--index & {
+    @media (max-width: 1279px) {
+      width: 30%;
+    }
+
+    @media (min-width: 1280px) {
+      flex-direction: column-reverse;
+      width: auto;
+    }
+  }
+}
+
+.user-menu__item {
+  margin-bottom: 15px;
+  margin-left: 22px;
+
+  .page--index & {
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 22px;
+    margin-left: 32px;
+
+    .page--index & {
+      margin-top: 22px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .page--index & {
+      margin-top: 33px;
+      margin-left: 0;
+
+      &:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.user-menu__link {
+  display: block;
+  width: 20px;
+  height: 18px;
+  background: center / contain no-repeat;
+  transition: opacity 0.3s;
+
+  @each $item in search, cart {
+    &--#{$item} {
+      background-image: url("../img/user-menu_icon-#{$item}.svg");
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  @media (min-width: 768px) {
+    width: 22px;
+    height: 20px;
+  }
+
+  @media (min-width: 1280px) {
+    background-position: right;
+  }
+}

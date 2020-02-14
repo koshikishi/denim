@@ -1,0 +1,277 @@
+.hero {
+  background-color: $colorBackground;
+  @media (max-width: 1279px) {
+    padding-bottom: 50px;
+
+    @media (min-width: 768px) {
+      padding-bottom: 42px;
+    }
+  }
+}
+
+.hero__inner {
+  @extend %container;
+
+  @media (min-width: 768px) {
+    position: relative;
+
+    @media (max-width: 1279px) {
+      padding-bottom: 53px;
+    }
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+
+  @media (min-width: 1280px) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hero__image {
+  position: relative;
+  padding: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 109px;
+    height: 80px;
+    background: 4px / 16px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/image_bg-pattern.png");
+    }
+
+    .webp & {
+      background-image: url("../img/image_bg-pattern.webp");
+    }
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
+    transform: scaleX(-1);
+  }
+
+  img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 202px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 24px 30px 30px;
+
+    &::before,
+    &::after {
+      width: 141px;
+      height: 104px;
+      background-size: 21px;
+    }
+
+    img {
+      width: 264px;
+    }
+
+    @media (max-width: 1279px) {
+      margin-right: calc(50% - 339px);
+
+      &::before {
+        top: -6px;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    padding: 50px;
+
+    &::before,
+    &::after {
+      width: 232px;
+      height: 176px;
+      background-position: 7px;
+      background-size: 35px;
+    }
+
+    img {
+      width: 430px;
+    }
+  }
+}
+
+.hero__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    align-items: flex-start;
+    margin-right: 33px;
+
+    @media (max-width: 1279px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 18px;
+    margin-right: 45px;
+    margin-left: 50px;
+  }
+}
+
+.hero__heading {
+  margin-bottom: 25px;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 28px;
+  }
+}
+
+.hero__slogan {
+  margin-top: 0;
+  margin-bottom: -2px;
+  font-size: $fontSizeTextLarge;
+  line-height: $lineHeightTextLarge;
+  color: $colorSecondary;
+
+  @media (min-width: 768px) {
+    margin-bottom: 1px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: -6px;
+  }
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: #{$fontSizeTitleHeroMobile}/#{$lineHeightNormal} $fontFamilyTitle;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeTitleHeroTablet;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: $fontSizeTitleHeroDesktop;
+  }
+}
+
+.hero__social {
+  @extend %list-reset;
+  position: absolute;
+  right: 45px;
+  bottom: 0;
+
+  @media (max-width: 1279px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 1280px) {
+    right: 55px;
+    bottom: 46px;
+    text-align: right;
+  }
+}
+
+.hero__social-item {
+  @media (max-width: 1279px) {
+    margin-left: 35px;
+
+    &:last-child {
+      margin-left: 0;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 26px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.hero__social-link {
+  @extend %text-small;
+  color: inherit;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.hero__down {
+  position: absolute;
+  bottom: 0;
+  left: 44px;
+  width: 12px;
+  height: 31px;
+  background: url("../img/hero_icon-arrow.svg") center / contain no-repeat;
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 1280px) {
+    bottom: 47px;
+    left: 54px;
+  }
+}

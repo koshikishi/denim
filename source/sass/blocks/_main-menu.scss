@@ -1,0 +1,92 @@
+.main-menu {
+  @extend %list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  .page--index & {
+    width: 70%;
+  }
+
+  @media (max-width: 767px) {
+    padding: 18px 15px;
+    background-color: $colorWhite;
+    visibility: hidden;
+
+    .page--index & {
+      padding: 0;
+      background: none;
+      visibility: visible;
+    }
+
+    .header__nav:target &,
+    .header__toggle--opened + &,
+    .header__toggle--closing + & {
+      visibility: visible;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 35%;
+  }
+
+  @media (min-width: 1280px) {
+    .page--index & {
+      display: block;
+      width: auto;
+    }
+  }
+}
+
+.main-menu__item {
+  margin-right: 25px;
+  margin-bottom: 7px;
+
+  .page--index & {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-right: 35px;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 1279px) {
+    .page--index & {
+      margin-top: 7px;
+
+      @media (min-width: 768px) {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .page--index & {
+      margin-right: 0;
+      margin-bottom: 26px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.main-menu__link {
+  @extend %text-regular;
+  color: inherit;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

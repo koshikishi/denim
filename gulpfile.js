@@ -8,6 +8,8 @@ const rename = require(`gulp-rename`);
 const htmlmin = require(`gulp-htmlmin`);
 const babel = require(`gulp-babel`);
 const uglify = require(`gulp-uglify`);
+const pipeline = require(`readable-stream`).pipeline;
+const modernizr = require(`gulp-modernizr`);
 const imagemin = require(`gulp-imagemin`);
 const imageminPngquant = require(`imagemin-pngquant`);
 const imageminMozjpeg = require(`imagemin-mozjpeg`);
@@ -60,6 +62,63 @@ function js() {
 }
 exports.js = js;
 
+// Минификация файлов библиотек *.css
+function csslibs() {
+  return src([
+    `node_modules/nouislider/distribute/nouislider.css`,
+    `node_modules/@glidejs/glide/dist/css/glide.core.css`
+  ])
+    .pipe(sourcemaps.init())
+    .pipe(cleanCSS({
+      level: {
+        1: {
+          specialComments: false
+        }
+      }
+    }))
+    .pipe(rename({
+      suffix: `.min`
+    }))
+    .pipe(sourcemaps.write(`.`))
+    .pipe(dest(`build/css`))
+}
+exports.csslibs = csslibs;
+
+// Минификация файлов библиотек *.js
+function jslibs() {
+  return pipeline(
+    src([
+      `node_modules/masonry-layout/dist/masonry.pkgd.js`,
+      `node_modules/nouislider/distribute/nouislider.js`,
+      `node_modules/@glidejs/glide/dist/glide.js`
+    ]),
+    uglify(),
+    rename({
+      suffix: `.min`
+    }),
+    dest(`build/js`)
+  );
+}
+exports.jslibs = jslibs;
+
+// Генерация файла библиотеки Modernizr
+function modzr() {
+  return src(`fake`, {
+    allowEmpty: true
+  })
+    .pipe(modernizr({
+      options: [`setClasses`],
+      crawl: false,
+      tests: [`webp`]
+    }))
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: `.min`
+    }))
+    .pipe(dest(`build/js`));
+}
+exports.modzr = modzr;
+
 // Сжатие файлов изображений
 exports.img = () => {
   return src([
@@ -78,8 +137,7 @@ exports.img = () => {
       imagemin.svgo()
     ]))
     .pipe(dest(`build/img`));
-}
-exports.img = img;
+};
 
 // Генерация файлов изображений в формате *.webp
 exports.webp = () => {
@@ -136,12 +194,12 @@ exports.refresh = refresh;
 // Создание сборки проекта
 exports.build = series(
   clean,
-  parallel(copy, css, js, html)
+  parallel(copy, css, js, csslibs, jslibs, modzr, html)
 );
 
 // Создание сборки проекта и запуск сервера Browsersync
 exports.start = series(
   clean,
-  parallel(copy, css, js, html),
+  parallel(copy, css, js, csslibs, jslibs, modzr, html),
   server
 );

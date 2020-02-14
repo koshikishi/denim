@@ -1,0 +1,52 @@
+.breadcrumbs {
+  @extend %list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__item {
+  @extend %text-large;
+  margin-bottom: 10px;
+  color: $colorSecondary;
+
+  &:not(:last-child) {
+    position: relative;
+    margin-right: 11px;
+    padding-right: 18px;
+
+    &::after {
+      content: "/";
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &:first-child {
+      display: none;
+    }
+  }
+}
+
+.breadcrumbs__link {
+  color: inherit;
+
+  &--active {
+    color: $colorPrimary;
+  }
+
+  &[href] {
+    transition: opacity 0.3s;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
